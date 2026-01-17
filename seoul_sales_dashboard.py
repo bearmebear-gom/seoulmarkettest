@@ -8,7 +8,9 @@ import os
 st.set_page_config(page_title="서울시 상권 분석 대시보드", layout="wide")
 
 # Constants & Mapping
-FILE_PATH = "/Users/garam/Desktop/icb6/team project/서울시 상권분석서비스(추정매출-상권).csv"
+# 배포를 위해 절대 경로 대신 상대 경로를 사용합니다.
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_PATH = os.path.join(BASE_DIR, "team project", "서울시 상권분석서비스(추정매출-상권).csv")
 
 KEYWORD_TO_DISTRICT = {
     '종로': '종로구', '혜화': '종로구', '창신': '종로구', '인사동': '종로구',
